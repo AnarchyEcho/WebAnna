@@ -5,7 +5,13 @@
 <template>
   <div class="header">
     <NuxtLink to="/">
-      Library
+      Home
+    </NuxtLink>
+    <NuxtLink to="/commands">
+      Commands
+    </NuxtLink>
+    <NuxtLink to="https://echodev.sh">
+      Dev Homepage
     </NuxtLink>
   </div>
 </template>
