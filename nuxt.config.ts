@@ -13,4 +13,15 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
+  devtools: {
+    enabled: true,
+  },
+  modules: ['@nuxt/content'],
+  content: {
+    documentDriven: true,
+    contentHead: true,
+    markdown: {
+      anchorLinks: false,
+    },
+  },
 });

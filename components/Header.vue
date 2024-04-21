@@ -26,6 +26,9 @@ a {
   font-size: 2rem;
   padding: 0.5rem;
   color: #f5f5f5;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 .header {
   display: flex;
