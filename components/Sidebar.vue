@@ -1,19 +1,33 @@
 <script setup lang="ts">
-const { toc } = useContent();
+const route = useRoute();
+const { data } = await useAsyncData(route.path, () => queryContent(route.path).findOne());
 </script>
 
-<template>
-  <nav class="sidebar">
+<template v-if="$route.path === 'commands'">
+  <nav v-if="data" class="sidebar">
     <div
-      v-for="link in toc.links"
+      v-for="link in data.body?.toc?.links"
       :key="link.id"
     >
       <NuxtLink
         :to="`#${link.id}`"
         :class="{'active-link': $route.hash.replace('#', '') === link.id}"
+        @click="console.log(data)"
       >
-        {{ link.text }}
+        > {{ link.text }}
       </NuxtLink>
+      <div
+        v-for="child in link.children"
+        :key="child.id"
+      >
+        <NuxtLink
+          :to="`#${child.id}`"
+          :class="{'active-link': $route.hash.replace('#', '') === child.id}"
+          @click="console.log(data)"
+        >
+          \ > {{ child.text }}
+        </NuxtLink>
+      </div>
     </div>
   </nav>
 </template>
@@ -21,11 +35,9 @@ const { toc } = useContent();
 <style scoped lang="scss">
 .active-link {
   color: #ffa500;
-  background-color: #303030;
-  border-radius: 10px;
 }
 a {
-  font-size: 2rem;
+  font-size: 1.3rem;
   padding: 0.5rem;
   color: #f5f5f5;
   @media (max-width: 768px) {
@@ -36,14 +48,24 @@ a {
   position: sticky;
   top: 2rem;
   max-height: 90vh;
-  overflow-y: scroll;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: start;
   gap: 1.5rem;
   margin-top: 1rem;
   grid-area: Sidebar;
+  div {
+    width: 100%;
+    border-bottom: 5px solid #303030;
+    div {
+      margin: 1rem 0 0.4rem 1rem;
+      border: 0;
+      @media (max-width: 768px) {
+        margin: 0.3rem 0 0.2rem 0.3rem;
+      }
+    }
+  }
 }
 </style>
