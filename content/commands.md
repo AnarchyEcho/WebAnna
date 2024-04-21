@@ -20,6 +20,19 @@ description: 'List of commands and how to use them.'
 
 <br>
 
+### [Pic]{style="color: #ffa500"}
+**Summary**: Sends a random image of {category}.
+
+**Alias**: pic.
+
+**Usage**: anna pic {category}
+
+**Categories**: meme. (more to come, need more images).
+
+**Explanation**: {category} is ***required***.
+
+<br>
+
 ### [MyWarnings]{style="color: #ffa500"}
 **Summary**: Shows your currently yet to expire warnings, how long they have left until expiring, and reason.
 
@@ -37,6 +50,17 @@ description: 'List of commands and how to use them.'
 
 ## [Economy commands]{style="color: #ffa500"}
 
+### [Balance]{style="color: #ffa500"}
+**Summary**: Tells you how much currency you have.
+
+**Alias**: bal, balance.
+
+**Usage**: anna bal
+
+**Explanation**: No queries required.
+
+<br>
+
 ### [Shop]{style="color: #ffa500"}
 **Summary**: Opens the shop in the channel the command was used in.
 
@@ -45,6 +69,56 @@ description: 'List of commands and how to use them.'
 **Usage**: anna shop
 
 **Explanation**: No queries required.
+
+<br>
+
+### [Buy]{style="color: #ffa500"}
+**Summary**: Buys item nr {itemNumber} from the shop, giving you what it details.
+
+**Alias**: buy.
+
+**Usage**: anna buy {itemNumber}
+
+**Explanation**: {itemNumber} is a **number** and is ***required***.
+
+<br>
+
+### [Sell]{style="color: #ffa500"}
+**Summary**: Sells item nr {itemNumber} from the shop, refunding you an amount of what you bought it for and removing it from you.
+
+**Alias**: sell.
+
+**Usage**: anna sell {itemNumber}
+
+**Explanation**: {itemNumber} is a **number** and is ***required***.
+
+<br>
+
+---
+
+<br>
+
+## [Gambling commands]{style="color: #ffa500"}
+
+### [Roulette]{style="color: #ffa500"}
+**Summary**: Spins the roulette wheel, gambling your {bet} for a chance of making it big, as long as you own that much currency to bet with.
+
+**Alias**: wheel, roulette.
+
+**Usage**: anna roulette {bet}
+
+**Explanation**: {bet} can be a **number** or **all**, and is ***required***.
+
+<br>
+
+### [Flip]{style="color: #ffa500"}
+**Summary**: Flip a coin, gambling your {bet} for a chance of making it big, as long as you own that much currency to bet with (Heads is win).
+
+**Alias**: flip.
+
+**Usage**: anna flip {bet}
+
+**Explanation**: {bet} can be a **number** or **all**, and is ***required***.
 
 <br>
 
@@ -61,12 +135,12 @@ description: 'List of commands and how to use them.'
 
 **Usage**: anna shopadd {orderId} {price} {roleId}
 
-**Explanation**: All {queries} are ***required***, {orderId} / {price} / {roleId} are all **numbers**,
+**Explanation**: All {queries} are **numbers** and are ***required***.
 
 <br>
 
 ### [ShopDescription]{style="color: #ffa500"}
-**Summary**: Edits item {id}'s description in the shop.
+**Summary**: Edits item nr {id}'s description in the shop.
 
 **Alias**: shopdesc, shopdescription.
 

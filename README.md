@@ -2,7 +2,7 @@
 
 ## Anna's features
 
-* **Administration**: Warn, punish, and ban users.
+* **Administration**: Verify, warn, punish, and ban users.
 
 * **Configurable**: Has configuration files for every server the bot is connected to, so you can personalise the bot if you need to.
 
