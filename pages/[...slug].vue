@@ -9,6 +9,7 @@ const { data: page } = await useAsyncData(route.path, () => queryContent(route.p
     <div v-if="page" class="Content">
       <ContentDoc v-if="page.body" :value="page" />
     </div>
+    <ToTop />
   </div>
 </template>
 
