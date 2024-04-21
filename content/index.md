@@ -1,6 +1,11 @@
-# Documentation and settings website for Anna, your favourite feature rich Discord bot
+---
+title: 'Home'
+description: 'Summary and buzzwords'
+---
 
-## Anna's features
+# [Documentation and settings (planned) website for Anna, your favourite feature rich Discord bot]{style="color: #ffa500"}
+
+## [Anna's features]{style="color: #ffa500"}
 
 * **Administration**: Warn, punish, and ban users.
 

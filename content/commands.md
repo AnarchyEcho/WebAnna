@@ -20,6 +20,17 @@ description: 'List of commands and how to use them.'
 
 <br>
 
+### [MyWarnings]{style="color: #ffa500"}
+**Summary**: Shows your currently yet to expire warnings, how long they have left until expiring, and reason.
+
+**Alias**: mywarnings.
+
+**Usage**: anna mywarnings
+
+**Explanation**: No queries required.
+
+<br>
+
 ---
 
 <br>
@@ -29,7 +40,11 @@ description: 'List of commands and how to use them.'
 ### [Shop]{style="color: #ffa500"}
 **Summary**: Opens the shop in the channel the command was used in.
 
+**Alias**: shop.
+
 **Usage**: anna shop
+
+**Explanation**: No queries required.
 
 <br>
 
