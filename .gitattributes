@@ -1,2 +1,1 @@
-*          linguist-language=md
-*          linguist-detectable
+*.md linguist-detectable
