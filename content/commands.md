@@ -5,7 +5,7 @@ description: 'List of commands and how to use them.'
 
 ## [General Commands]{style="color: #ffa500"}
 
-[***All commands have the normal anna call and a special character (default is a dot: . ) interchangeably.***]{style="color: #ffa555"}
+[***All commands have the normal anna call and a special character (configurable, default is a dot: . ) interchangeably.***]{style="color: #ffa555"}
 
 
 ### [Commands]{style="color: #ffa500"}
