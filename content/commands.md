@@ -225,3 +225,16 @@ description: 'List of commands and how to use them.'
 **Usage**: anna unmute {userId}
 
 **Explanation**: {userId} is a **number** and is ***required***.
+
+<br>
+
+### [Feeds]{style="color: #ffa500"}
+**Summary**: Shows you which feeds the current or chosen channel has subscribed to.
+
+**Alias**: feeds, feedlist.
+
+**Usage**: anna feeds {channelId}
+
+**Explanation**: {channelId} is a **number** and is ***optional***.
+
+<br>
