@@ -11,8 +11,7 @@ const { data } = await useAsyncData(route.path, () => queryContent(route.path).f
     >
       <NuxtLink
         :to="`#${link.id}`"
-        :class="{'active-link': $route.hash.replace('#', '') === link.id}"
-        @click="console.log(data)"
+        :class="{'active-link': $route.hash.replace('#', '') === link.id, 'treeParent': true}"
       >
         > {{ link.text }}
       </NuxtLink>
@@ -22,8 +21,7 @@ const { data } = await useAsyncData(route.path, () => queryContent(route.path).f
       >
         <NuxtLink
           :to="`#${child.id}`"
-          :class="{'active-link': $route.hash.replace('#', '') === child.id}"
-          @click="console.log(data)"
+          :class="{'active-link': $route.hash.replace('#', '') === child.id, 'treeChild': true}"
         >
           \ > {{ child.text }}
         </NuxtLink>
@@ -34,14 +32,24 @@ const { data } = await useAsyncData(route.path, () => queryContent(route.path).f
 
 <style scoped lang="scss">
 .active-link {
-  color: #ffa500;
+  color: #ffa500 !important;
 }
 a {
+  color: #f5f5f5;
+}
+.treeParent {
   font-size: 1.3rem;
   padding: 0.5rem;
   color: #f5f5f5;
   @media (max-width: 768px) {
     font-size: 0.8rem;
+  }
+}
+.treeChild {
+  font-size: 1rem;
+  padding: 0.5rem;
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
   }
 }
 .sidebar {

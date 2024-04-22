@@ -7,6 +7,18 @@ description: 'List of commands and how to use them.'
 
 [***All commands have the normal anna call and a special character (default is a dot: . ) interchangeably.***]{style="color: #ffa555"}
 
+
+### [Commands]{style="color: #ffa500"}
+**Summary**: Sends a link to this page.
+
+**Alias**: commands.
+
+**Usage**: anna commands
+
+**Explanation**: No queries required.
+
+<br>
+
 ### [Leaderboard]{style="color: #ffa500"}
 **Summary**: Sends a leaderboard for the selected {category} in the channel.
 

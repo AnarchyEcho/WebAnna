@@ -19,9 +19,7 @@ const { data: page } = await useAsyncData(route.path, () => queryContent(route.p
   margin-right: auto;
   width: 60vw;
   @media (max-width: 768px) {
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-    width: 100%;
+    width: 95vw;
   }
 }
 .\/ {
