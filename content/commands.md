@@ -73,6 +73,17 @@ description: 'List of commands and how to use them.'
 
 <br>
 
+### [Work]{style="color: #ffa500"}
+**Summary**: Gives you a configurable random amount of currency, this task has a configurable cooldown to stop spamming of it.
+
+**Alias**: work.
+
+**Usage**: anna work
+
+**Explanation**: No queries required.
+
+<br>
+
 ### [Shop]{style="color: #ffa500"}
 **Summary**: Opens the shop in the channel the command was used in.
 
