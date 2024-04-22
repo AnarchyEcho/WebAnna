@@ -151,6 +151,8 @@ description: 'List of commands and how to use them.'
 
 ## [Moderator+ commands]{style="color: #ffa500"}
 
+[***These are commands you need to have specific roles, typically moderator+ roles to use.***]{style="color: #ffa555"}
+
 ### [ShopAdd]{style="color: #ffa500"}
 **Summary**: Adds an item to the shop, or replaces an existing one, decided by which {orderId} you choose.
 
@@ -236,5 +238,27 @@ description: 'List of commands and how to use them.'
 **Usage**: anna feeds {channelId}
 
 **Explanation**: {channelId} is a **number** and is ***optional***.
+
+<br>
+
+### [FeedAdd]{style="color: #ffa500"}
+**Summary**: Adds a feed to the current or chosen channel.
+
+**Alias**: feedadd.
+
+**Usage**: anna feedadd {url} {channelId}
+
+**Explanation**: {url} is a **string** is ***required***, {channelId} is a **number** and is ***optional***.
+
+<br>
+
+### [FeedRemove]{style="color: #ffa500"}
+**Summary**: Removes a feed from the current or chosen channel.
+
+**Alias**: feedrm, feedremove, feeddel.
+
+**Usage**: anna feedrm {sortId} {channelId}
+
+**Explanation**: {sortId} is a **number** is ***required***, {channelId} is a **number** and is ***optional***.
 
 <br>
