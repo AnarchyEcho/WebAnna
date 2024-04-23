@@ -248,7 +248,7 @@ description: 'List of commands and how to use them.'
 
 **Usage**: anna feedadd {url, example: https://www.reddit.com/r/ProgrammerHumor/new.json} {channelId}
 
-**Explanation**: {url} is a **string** is ***required***, {channelId} is a **number** and is ***optional***.
+**Explanation**: {url} is a **string** and is ***required***, {channelId} is a **number** and is ***optional***.
 
 <br>
 
