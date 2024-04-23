@@ -9,6 +9,8 @@ description: 'Summary and buzzwords'
 
 * **Administration**: Verify, warn, punish, and ban users.
 
+* **Reddit feeds**: Subscribe to Reddit feeds in selected channels and get the newest pictures, gifs, and videos sent to the channel.
+
 * **Configurable**: Has configuration files for every server the bot is connected to, so you can personalise the bot if you need to.
 
 * **Economy**: Users gain virtual currency as they chat in the server that they can use in the shop, which is filled by the authorized personnel with items.
