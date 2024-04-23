@@ -3,12 +3,12 @@ title: 'Commands'
 description: 'List of commands and how to use them.'
 ---
 
-## [General Commands]{style="color: #ffa500"}
+## [General Commands]
 
-[***All commands have the normal anna call and a special character (configurable, default is a dot: . ) interchangeably.***]{style="color: #ffa555"}
+[All commands have the normal anna call and a special character (configurable, default is a dot: . ) interchangeably.]{.info}
 
 
-### [Commands]{style="color: #ffa500"}
+### [Commands]
 **Summary**: Sends a link to this page.
 
 **Alias**: commands.
@@ -19,7 +19,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Leaderboard]{style="color: #ffa500"}
+### [Leaderboard]
 **Summary**: Sends a leaderboard for the selected {category} in the channel.
 
 **Alias**: lb, leaderboard.
@@ -32,7 +32,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Pic]{style="color: #ffa500"}
+### [Pic]
 **Summary**: Sends a random image of {category}.
 
 **Alias**: pic.
@@ -45,7 +45,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [MyWarnings]{style="color: #ffa500"}
+### [MyWarnings]
 **Summary**: Shows your currently yet to expire warnings, how long they have left until expiring, and reason.
 
 **Alias**: mywarnings.
@@ -60,9 +60,9 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-## [Economy commands]{style="color: #ffa500"}
+## [Economy commands]
 
-### [Balance]{style="color: #ffa500"}
+### [Balance]
 **Summary**: Tells you how much currency you have.
 
 **Alias**: bal, balance.
@@ -73,7 +73,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Work]{style="color: #ffa500"}
+### [Work]
 **Summary**: Gives you a configurable random amount of currency, this task has a configurable cooldown to stop spamming of it.
 
 **Alias**: work.
@@ -84,7 +84,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Shop]{style="color: #ffa500"}
+### [Shop]
 **Summary**: Opens the shop in the channel the command was used in.
 
 **Alias**: shop.
@@ -95,7 +95,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Buy]{style="color: #ffa500"}
+### [Buy]
 **Summary**: Buys item nr {itemNumber} from the shop, giving you what it details.
 
 **Alias**: buy.
@@ -106,7 +106,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Sell]{style="color: #ffa500"}
+### [Sell]
 **Summary**: Sells item nr {itemNumber} from the shop, refunding you an amount of what you bought it for and removing it from you.
 
 **Alias**: sell.
@@ -121,9 +121,9 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-## [Gambling commands]{style="color: #ffa500"}
+## [Gambling commands]
 
-### [Roulette]{style="color: #ffa500"}
+### [Roulette]
 **Summary**: Spins the roulette wheel, gambling your {bet} for a chance of making it big, as long as you own that much currency to bet with.
 
 **Alias**: wheel, roulette.
@@ -134,7 +134,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Flip]{style="color: #ffa500"}
+### [Flip]
 **Summary**: Flip a coin, gambling your {bet} for a chance of making it big, as long as you own that much currency to bet with (Heads is win).
 
 **Alias**: flip.
@@ -149,11 +149,11 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-## [Moderator+ commands]{style="color: #ffa500"}
+## [Moderator+ commands]
 
-[***These are commands you need to have specific roles, typically moderator+ roles to use.***]{style="color: #ffa555"}
+[These are commands you need to have specific roles, typically moderator+ roles to use.]{.info}
 
-### [ShopAdd]{style="color: #ffa500"}
+### [ShopAdd]
 **Summary**: Adds an item to the shop, or replaces an existing one, decided by which {orderId} you choose.
 
 **Alias**: shopadd, shopadditem.
@@ -164,7 +164,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [ShopDescription]{style="color: #ffa500"}
+### [ShopDescription]
 **Summary**: Edits item nr {id}'s description in the shop.
 
 **Alias**: shopdesc, shopdescription.
@@ -175,7 +175,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [ShopRemove]{style="color: #ffa500"}
+### [ShopRemove]
 **Summary**: Removes item {id} from the shop.
 
 **Alias**: shoprm, shopremove.
@@ -186,7 +186,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Warnings]{style="color: #ffa500"}
+### [Warnings]
 **Summary**: Shows selected {userId}'s unexpired warnings.
 
 **Alias**: warnings.
@@ -197,7 +197,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Warn]{style="color: #ffa500"}
+### [Warn]
 **Summary**: Warns selected {userId}, which expires in {time} amount of minutes, potentially giving them a rule-assigned punishment (configurable) and sends them a DM telling them of the {reason} they were warned.
 
 **Alias**: warn.
@@ -208,7 +208,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Forgive]{style="color: #ffa500"}
+### [Forgive]
 **Summary**: Forgives selected {userId}, marking warning nr {warningId} as forgiven.
 
 **Alias**: forgive.
@@ -219,7 +219,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Unmute]{style="color: #ffa500"}
+### [Unmute]
 **Summary**: Unmutes selected {userId}, removing their timeout or giving them back their roles, depending on what your configuration settings are, this also runs automatically every 5 minutes, checking for expired mutes to revoke.
 
 **Alias**: unmute.
@@ -230,7 +230,7 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [Feeds]{style="color: #ffa500"}
+### [Feeds]
 **Summary**: Shows you which feeds the current or chosen channel has subscribed to.
 
 **Alias**: feeds, feedlist.
@@ -241,18 +241,20 @@ description: 'List of commands and how to use them.'
 
 <br>
 
-### [FeedAdd]{style="color: #ffa500"}
+### [FeedAdd]
 **Summary**: Adds a feed to the current or chosen channel.
 
 **Alias**: feedadd.
 
-**Usage**: anna feedadd {url, example: [https://www.reddit.com/r/ProgrammerHumor/new.json] } {channelId}
+**Usage**: anna feedadd {url, **example**:
+[https://www.reddit.com/r/ProgrammerHumor/new.json](https://www.reddit.com/r/ProgrammerHumor/new.json)
+} {channelId}
 
 **Explanation**: {url} is a **string** and is ***required***, {channelId} is a **number** and is ***optional***.
 
 <br>
 
-### [FeedRemove]{style="color: #ffa500"}
+### [FeedRemove]
 **Summary**: Removes a feed from the current or chosen channel.
 
 **Alias**: feedrm, feedremove, feeddel.

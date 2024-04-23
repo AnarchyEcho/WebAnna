@@ -30,5 +30,6 @@ const gitUrl = 'https://github.com/AnarchyEcho';
 }
 a {
   color: #ffa500;
+  text-decoration: none;
 }
 </style>

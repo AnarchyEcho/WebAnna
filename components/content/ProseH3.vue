@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { computed, useRuntimeConfig } from '#imports';
+
+const props = defineProps<{ id?: string }>();
+
+const { headings } = useRuntimeConfig().public.mdc;
+const generate = computed(() => props.id && headings?.anchorLinks?.h3);
+</script>
+
 <template>
   <h3 :id="id">
     <a
@@ -10,11 +19,8 @@
   </h3>
 </template>
 
-<script setup lang="ts">
-import { computed, useRuntimeConfig } from '#imports'
-
-const props = defineProps<{ id?: string }>()
-
-const { headings } = useRuntimeConfig().public.mdc
-const generate = computed(() => props.id && headings?.anchorLinks?.h3)
-</script>
+<style scoped lang="scss">
+h3 {
+  color: #ffa500;
+}
+</style>

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { PropType } from 'vue';
-
 defineProps({
   href: {
     type: String,
@@ -15,15 +13,15 @@ defineProps({
 </script>
 
 <template>
-  <span>
-    <NuxtLink
-      :href="href"
-      :target="target"
-    >
-      <slot />
-    </NuxtLink>
-    &#10548;
-  </span>
+  <NuxtLink
+    :href="href"
+    :target="!href.startsWith('/') ? '_blank' : target"
+  >
+    <slot />
+    <span v-if="!href.startsWith('/')">
+      &#10548;
+    </span>
+  </NuxtLink>
 </template>
 
 <style scoped lang="scss">
