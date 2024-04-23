@@ -26,7 +26,7 @@ description: 'List of commands and how to use them.'
 
 **Usage**: anna lb {category}
 
-**Categories**: experience, currency.
+**Categories**: experience/exp, currency/cur.
 
 **Explanation**: {category} is ***required***.
 
