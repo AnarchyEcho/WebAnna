@@ -52,7 +52,7 @@ const { data: page } = await useAsyncData(route.path, () => queryContent(route.p
 h2 {
   color: #ffa500;
 }
-a {
-  color: #ffa500;
+.linkClass {
+  color: #ffa500 !important;
 }
 </style>
