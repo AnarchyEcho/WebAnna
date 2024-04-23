@@ -36,6 +36,7 @@ const { data } = await useAsyncData(route.path, () => queryContent(route.path).f
 }
 a {
   color: #f5f5f5;
+  text-decoration: none;
 }
 .treeParent {
   font-size: 1.3rem;

@@ -22,9 +22,6 @@ html, body {
     scroll-behavior: auto;
   }
 }
-a {
-  text-decoration: none;
-}
 .app {
   min-height: 100vh;
   display: grid;

@@ -49,10 +49,4 @@ const { data: page } = await useAsyncData(route.path, () => queryContent(route.p
   grid-area: Content;
   justify-self: start;
 }
-h2 {
-  color: #ffa500;
-}
-.linkClass {
-  color: #ffa500 !important;
-}
 </style>
