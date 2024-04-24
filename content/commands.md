@@ -56,6 +56,17 @@ description: 'List of commands and how to use them.'
 
 <br>
 
+### [Experience]
+**Summary**: Shows an image with your experience, needed exp to next level, and other stats depending on the config of the server.
+
+**Alias**: xp, exp, experience.
+
+**Usage**: anna exp
+
+**Explanation**: No queries required.
+
+<br>
+
 ---
 
 <br>
