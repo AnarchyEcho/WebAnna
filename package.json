@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "nuxt build --env-file=.env",
-    "dev": "nuxt dev --env-file=.env.dev",
-    "generate": "nuxt generate --env-file=.env",
-    "preview": "nuxt preview--env-file=.env"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "dependencies": {
     "@nuxt/content": "^2.12.1",
