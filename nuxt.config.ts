@@ -17,12 +17,31 @@ export default defineNuxtConfig({
     enabled: true,
   },
   runtimeConfig: {
+    oauth: {
+      discord: {
+        clientId: process.env.NUXT_DISCORD_CLIENT_ID,
+        clientSecret: process.env.NUXT_DISCORD_CLIENT_SECRET,
+      },
+    },
     public: {
       annaWebhookId: '',
       annaWebhookToken: '',
     },
+    session: {
+      maxAge: 60 * 60 * 24 * 7,
+      name: 'nuxt-session',
+      password: process.env.NUXT_SESSION_PASSWORD || '',
+      cookie: {
+        sameSite: 'lax',
+      },
+    },
   },
-  modules: ['@nuxt/content'],
+  routeRules: {
+    '/settings': {
+      appMiddleware: 'auth-check',
+    },
+  },
+  modules: ['nuxt-auth-utils', '@nuxt/content'],
   content: {
     documentDriven: true,
     contentHead: true,

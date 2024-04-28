@@ -1,20 +1,14 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  <h1 :id="id">
-    <a
-      v-if="generate"
-      :href="`#${id}`"
-    >
-      <slot />
-    </a>
-    <slot v-else />
+  <h1>
+    <slot />
   </h1>
 </template>
 
-<script setup lang="ts">
-import { computed, useRuntimeConfig } from '#imports'
-
-const props = defineProps<{ id?: string }>()
-
-const { headings } = useRuntimeConfig().public.mdc
-const generate = computed(() => props.id && headings?.anchorLinks?.h1)
-</script>
+<style scoped lang="scss">
+h1 {
+  color: #FFA500;
+}
+</style>

@@ -3,9 +3,9 @@ title: 'Home'
 description: 'Summary and buzzwords'
 ---
 
-# [Documentation and settings (planned) website for Anna, your favourite feature rich Discord bot]{style="color: #ffa500"}
+# Documentation and settings (planned) website for Anna, your favourite feature rich Discord bot
 
-## [Anna's features]{style="color: #ffa500"}
+## Anna's features
 
 * **Administration**: Verify, warn, punish, and ban users.
 

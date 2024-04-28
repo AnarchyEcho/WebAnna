@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute();
-const { data: page } = await useAsyncData(route.path, async () => await queryContent(route.path).find());
+const { data: page } = await useAsyncData(route.path, async () => await queryContent(route.path).where({ title: route.path }).findOne());
 </script>
 
 <template>
@@ -25,9 +25,6 @@ const { data: page } = await useAsyncData(route.path, async () => await queryCon
 .\/ {
   display: flex;
   justify-content: center;
-  .sidebar {
-    display: none;
-  }
 }
 .\/commands {
   display: grid;

@@ -4,6 +4,7 @@
 *_config.json
 !*sample_config.json
 .output
+.env*
 
 # Database
 

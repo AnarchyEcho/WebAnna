@@ -3,8 +3,8 @@ const route = useRoute();
 const { data } = await useAsyncData(route.path, () => queryContent(route.path).findOne());
 </script>
 
-<template v-if="$route.path === 'commands'">
-  <nav v-if="data" class="sidebar">
+<template>
+  <nav v-if="data && $route.path !== '/'" class="sidebar">
     <div
       v-for="link in data.body?.toc?.links"
       :key="link.id"

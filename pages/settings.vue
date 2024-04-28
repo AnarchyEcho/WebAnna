@@ -13,7 +13,6 @@ const saveConfig = async () => {
   const formdata = new FormData();
   formdata.append('file', new Blob([JSON.stringify(fullConfig.value)], { type: 'application/json' }), msgObject.value.title.replace('_file', '.json'));
   formdata.append('payload_json', JSON.stringify({ content: msgObject.value.title }));
-  fullConfig.value.currency = 'big testa';
   await fetch(`${hookUrl}/messages/${msgObject.value.id}`, {
     method: 'PATCH',
     headers: {
@@ -67,8 +66,8 @@ await getConfig(`${hookUrl}/messages/1233416684518244373`);
       <Title>Settings</Title>
     </Head>
 
-    Settings page for Anna
-    <div
+    Settings page for Anna, WIP, soon you will be able to change the bots config here for your chosen server.
+    <!-- <div
       @click="async () => {
         await getConfig(`${hookUrl}/messages/1233416684518244373`);
       }"
@@ -79,7 +78,7 @@ await getConfig(`${hookUrl}/messages/1233416684518244373`);
       @click="saveConfig()"
     >
       Save config.
-    </div>
+    </div> -->
   </div>
 </template>
 
