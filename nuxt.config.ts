@@ -16,6 +16,12 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
+  runtimeConfig: {
+    public: {
+      annaWebhookId: '',
+      annaWebhookToken: '',
+    },
+  },
   modules: ['@nuxt/content'],
   content: {
     documentDriven: true,

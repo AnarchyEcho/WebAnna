@@ -10,6 +10,9 @@
     <NuxtLink to="/commands">
       Commands
     </NuxtLink>
+    <!-- <NuxtLink to="/settings">
+      Settings
+    </NuxtLink> -->
     <NuxtLink to="https://echodev.sh">
       Dev Homepage
     </NuxtLink>
@@ -37,5 +40,8 @@ a {
   align-items: center;
   gap: 2rem;
   margin-top: 1rem;
+  @media (max-width: 768px) {
+    gap: calc(100% / 80);
+  }
 }
 </style>
