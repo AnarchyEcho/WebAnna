@@ -50,6 +50,7 @@ const setGuild = (guild: IGuild) => {
   justify-items: center;
   align-items: center;
   padding-top: 10px;
+  border: 2px solid #222;
   &:hover {
     border: 2px solid #ffa500;
     border-radius: 10px;
