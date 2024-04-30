@@ -1,54 +1,19 @@
 <script lang="ts" setup>
-import type { IConfig } from '~/interfaces';
+import type { IConfig, IGuild } from '~/interfaces';
 const config = useRuntimeConfig();
-const hookUrl = `https://discordapp.com/api/webhooks/${config.public.annaWebhookId}/${config.public.annaWebhookToken}`;
+const { user } = useUserSession();
+const baseUrl = 'https://discordapp.com/api';
+const hookUrl = `${baseUrl}/webhooks/${config.public.annaWebhookId}/${config.public.annaWebhookToken}`;
 
+const confIdList = useState('confIdList');
 const msgObject = useState<{
   title: string,
   id: string
 }>('msgObject');
 const fullConfig = useState<IConfig>('fullConfig');
-
-const saveConfig = async () => {
-  const formdata = new FormData();
-  formdata.append('file', new Blob([JSON.stringify(fullConfig.value)], { type: 'application/json' }), msgObject.value.title.replace('_file', '.json'));
-  formdata.append('payload_json', JSON.stringify({ content: msgObject.value.title }));
-  await fetch(`${hookUrl}/messages/${msgObject.value.id}`, {
-    method: 'PATCH',
-    headers: {
-      'Content-type': 'application/json',
-    },
-    body: JSON.stringify({
-      content: msgObject.value.title,
-      attachments: [],
-    }),
-  }).then(async () => {
-    await fetch(`${hookUrl}/messages/${msgObject.value.id}`, {
-      method: 'PATCH',
-      body: formdata,
-    });
-  });
-};
-
-const getConfig = async (url: string) => {
-  await fetch(url, {
-    method: 'GET',
-  }).then(response => response.json())
-    .then(async (res) => {
-      msgObject.value = {
-        id: res.content?.match('(?<=Echo_Chamber_config.json:\\s)(\\d,?)+(?=\\.|,)')?.[0],
-        title: res.content?.match('(Echo_Chamber_config.json)')?.[0].replace('.json', '_file'),
-      };
-      const message = await fetch(`${hookUrl}/messages/${msgObject.value.id}`, {
-        method: 'GET',
-      }).then(x => x.json());
-      if (message.attachments !== undefined) {
-        await fetch(message.attachments[0].url, {
-          method: 'GET',
-        }).then(x => x.json()).then(configJson => fullConfig.value = configJson);
-      }
-    });
-};
+const validGuilds = useState<IGuild[] | undefined>('validGuilds');
+const chosenGuild = useState<IGuild | undefined>('chosenGuild');
+const goBack = () => { chosenGuild.value = undefined; };
 
 const body = reactive({
   content: 'default',
@@ -56,8 +21,24 @@ const body = reactive({
   avatar_url: null,
   embeds: null,
 });
-await getConfig(`${hookUrl}/messages/1233416684518244373`);
 
+const userProfile = async () => {
+  return await fetch(`${baseUrl}/users/@me/guilds`, {
+    method: 'GET',
+    headers: {
+      authorization: `${user.value?.tokens.token_type} ${user.value?.tokens.access_token}`,
+    },
+  }).then(x => x.json()).then((x: IGuild[]) => {
+    if (x) {
+      return x.filter((y: IGuild) => (y.permissions & 0x10) === 0x10);
+    }
+  });
+};
+
+await callOnce(async () => {
+  validGuilds.value = await userProfile();
+  confIdList.value = await getConfigList(`${hookUrl}/messages/1233416684518244373`);
+});
 </script>
 
 <template>
@@ -66,22 +47,36 @@ await getConfig(`${hookUrl}/messages/1233416684518244373`);
       <Title>Settings</Title>
     </Head>
 
-    Settings page for Anna, WIP, soon you will be able to change the bots config here for your chosen server.
-    <!-- <div
-      @click="async () => {
-        await getConfig(`${hookUrl}/messages/1233416684518244373`);
-      }"
-    >
-      Get config.
+    <GuildSelect v-if="!chosenGuild" />
+    <div v-else>
+      <div style="color: #ffa500; font-weight: bold;" @click="goBack">
+        {{ '<' }} Back to server selection.
+      </div>
+      <div
+        @click="async () => {
+          await getConfig(`${hookUrl}/messages/1233416684518244373`, hookUrl, chosenGuild as IGuild).catch(async () => {
+            await createConfigMessage(hookUrl).then(async () => await getConfig(`${hookUrl}/messages/1233416684518244373`, hookUrl, chosenGuild as IGuild));
+          });
+        }"
+      >
+        Get config.
+      </div>
+      <div
+        @click="saveConfig(hookUrl)"
+      >
+        Save config.
+      </div>
     </div>
-    <div
-      @click="saveConfig()"
-    >
-      Save config.
-    </div> -->
   </div>
 </template>
 
-<style>
-
+<style scoped lang="scss">
+.Body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
+  @media (max-width: 768px) {
+    width: 95vw;
+  }
+}
 </style>

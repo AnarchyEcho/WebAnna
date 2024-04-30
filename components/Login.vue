@@ -1,22 +1,9 @@
 <script setup lang="ts">
-const { loggedIn, user, clear } = useUserSession();
-
-const baseUrl = 'https://discordapp.com/api';
-const userProfile = async () => {
-  return await fetch(`${baseUrl}/users/@me/guilds`, {
-    method: 'GET',
-    headers: {
-      authorization: `${user.value?.tokens.token_type} ${user.value?.tokens.access_token}`,
-    },
-  }).then(x => x.json());
-};
+const { loggedIn, clear } = useUserSession();
 </script>
 
 <template>
   <div v-if="loggedIn">
-    <button @click="userProfile">
-      Get Profile
-    </button>
     <button @click="clear(); navigateTo('/')">
       Logout
     </button>
@@ -27,3 +14,20 @@ const userProfile = async () => {
     </button>
   </div>
 </template>
+
+<style scoped lang="scss">
+button {
+  color: #fefefe;
+  font-size: large;
+  background-color: #404040;
+  border-radius: 10px;
+  border-color: #ffa500;
+  padding: 0.5rem;
+  &:hover {
+    background-color: #353535;
+  }
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
+</style>
