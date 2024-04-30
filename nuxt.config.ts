@@ -41,7 +41,7 @@ export default defineNuxtConfig({
       appMiddleware: 'auth-check',
     },
   },
-  modules: ['nuxt-auth-utils', '@nuxt/content'],
+  modules: ['nuxt-auth-utils', '@nuxt/content', "@nuxt/image"],
   content: {
     documentDriven: true,
     contentHead: true,

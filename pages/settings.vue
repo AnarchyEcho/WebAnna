@@ -10,10 +10,13 @@ const msgObject = useState<{
   title: string,
   id: string
 }>('msgObject');
-const fullConfig = useState<IConfig>('fullConfig');
+const fullConfig = useState<IConfig | undefined>('fullConfig');
 const validGuilds = useState<IGuild[] | undefined>('validGuilds');
 const chosenGuild = useState<IGuild | undefined>('chosenGuild');
-const goBack = () => { chosenGuild.value = undefined; };
+const goBack = () => {
+  chosenGuild.value = undefined;
+  fullConfig.value = undefined;
+};
 
 const body = reactive({
   content: 'default',
@@ -49,7 +52,7 @@ await callOnce(async () => {
 
     <GuildSelect v-if="!chosenGuild" />
     <div v-else>
-      <div style="color: #ffa500; font-weight: bold;" @click="goBack">
+      <div style="color: #ffa500; font-weight: bold; cursor: pointer;" @click="goBack">
         {{ '<' }} Back to server selection.
       </div>
       <div
