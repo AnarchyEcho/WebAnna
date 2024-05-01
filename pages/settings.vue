@@ -56,7 +56,7 @@ await callOnce(async () => {
       </div>
 
       <div
-        style="width: fit-content; cursor: pointer;"
+        class="saveBtn"
         @click="saveConfig(hookUrl)"
       >
         Save config.
@@ -67,15 +67,29 @@ await callOnce(async () => {
 
 <style scoped lang="scss">
 .Body {
-  margin-left: auto;
+  margin-left: 1%;
   margin-right: auto;
-  width: 60vw;
+  width: 99%;
   @media (max-width: 768px) {
     width: 95vw;
   }
 }
 .edit {
   margin: 20px 0;
+}
+.saveBtn {
+  margin: 0 auto;
+  width: fit-content;
+  cursor: pointer;
+  color: #fefefe;
+  font-size: large;
+  background-color: #404040;
+  border-radius: 10px;
+  border: 2px solid #ffa500;
+  padding: 0.5rem;
+  &:hover {
+    background-color: #353535;
+  }
 }
 a {
   color: #ffa500;
