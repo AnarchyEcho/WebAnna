@@ -270,7 +270,17 @@ const config = useState<IConfig>('fullConfig');
       <div v-for="x, y in config['verifyQuestions']" :key="y" class="multiItem">
         <div>
           <div>Question: <input v-model="config['verifyQuestions'][y].question" type="text"></div>
-          <div>Style: <input v-model="config['verifyQuestions'][y].style" type="number"></div>
+          <div>
+            Style:
+            <select v-model="config['verifyQuestions'][y].style">
+              <option>
+                1
+              </option>
+              <option>
+                2
+              </option>
+            </select>
+          </div>
           <div>Required: <input v-model="config['verifyQuestions'][y].required" type="checkbox"></div>
           <div class="removeButton" @click="config['verifyQuestions'].splice(y, 1)">
             [Remove]
