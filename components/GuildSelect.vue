@@ -16,5 +16,8 @@ const validGuilds = useState<IGuild[]>('validGuilds');
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 }
 </style>

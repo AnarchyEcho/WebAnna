@@ -28,6 +28,7 @@ button {
   }
   @media (max-width: 768px) {
     padding: 0;
+    font-size: 1rem;
   }
 }
 </style>
