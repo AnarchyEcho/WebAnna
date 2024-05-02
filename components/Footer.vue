@@ -1,9 +1,16 @@
 <script setup lang="ts">
 const gitUrl = 'https://github.com/AnarchyEcho';
+const discUrl = 'https://discord.com/users/213365404733669388';
 </script>
 
 <template>
   <div class="footer">
+    <p style="width: 150px;">
+      Discord:
+      <NuxtLink :href="discUrl" target="_blank" rel="noreferrer">
+        anarchyecho
+      </NuxtLink>
+    </p>
     <p style="width: 150px;">
       &copy; {{ `Copyright 2024 - ${new Date().getFullYear()}` }} <NuxtLink :href="gitUrl" target="_blank" rel="noreferrer">
         Andrè Hagen

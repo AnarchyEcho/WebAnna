@@ -7,6 +7,7 @@ const hookUrl = `${baseUrl}/webhooks/${config.public.annaWebhookId}/${config.pub
 
 const confIdList = useState('confIdList');
 const fullConfig = useState<IConfig | undefined>('fullConfig');
+const editErrors = useState('configErrors', () => { return new Set<string>([]); });
 const validGuilds = useState<IGuild[] | undefined>('validGuilds');
 const chosenGuild = useState<IGuild | undefined>('chosenGuild');
 const goBack = () => {
@@ -56,7 +57,8 @@ await callOnce(async () => {
       </div>
 
       <div
-        class="saveBtn"
+        :class="{'errors': editErrors.size > 0, 'saveBtn': true }"
+        :aria-disabled="editErrors.size > 0"
         @click="saveConfig(hookUrl)"
       >
         Save config.
@@ -90,6 +92,12 @@ await callOnce(async () => {
   &:hover {
     background-color: #353535;
   }
+}
+.errors {
+  cursor: not-allowed;
+  pointer-events: none;
+  border: 2px solid #999999;
+  background-color: #999999;
 }
 a {
   color: #ffa500;
