@@ -9,7 +9,7 @@ export const createConfigMessage = async (hookUrl: string) => {
     body: JSON.stringify({
       username: null,
       avatar_url: null,
-      content: `${chosenGuild.value.name.replaceAll(' ', '_')}_config_file`,
+      content: `${chosenGuild.value.name.replaceAll(' ', '_')}_config_file ${chosenGuild.value.id}`,
     }),
   }).then(x => x.json());
 };
