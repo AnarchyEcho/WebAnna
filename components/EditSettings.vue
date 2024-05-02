@@ -346,8 +346,9 @@ div {
 }
 .form {
   max-height: 50rem;
-  width: 100%;
+  width: fit-content;
   display: flex;
+  gap: 0 20px;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
