@@ -14,7 +14,7 @@
       Settings
     </NuxtLink>
     <NuxtLink to="https://echodev.sh">
-      Dev Homepage
+      EchoDev
     </NuxtLink>
     <Login />
   </div>

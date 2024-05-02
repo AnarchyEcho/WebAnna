@@ -3,7 +3,9 @@ title: 'Home'
 description: 'Summary and buzzwords'
 ---
 
-# Documentation and settings (planned) website for Anna, your favourite feature rich Discord bot
+# Documentation and settings website for Anna, your favourite feature rich Discord bot
+
+Is Anna not yet in your server? [Invite her then!](https://discord.com/oauth2/authorize?client_id=1214431764408311829&permissions=8&scope=bot)
 
 ## Anna's features
 
