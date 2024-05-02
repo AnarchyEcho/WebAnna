@@ -5,6 +5,7 @@ const { user } = useUserSession();
 const baseUrl = 'https://discordapp.com/api';
 const hookUrl = `${baseUrl}/webhooks/${config.public.annaWebhookId}/${config.public.annaWebhookToken}`;
 
+const saving = useState<boolean>('saving', () => false);
 const confIdList = useState('confIdList');
 const fullConfig = useState<IConfig | undefined>('fullConfig');
 const editErrors = useState('configErrors', () => { return new Set<string>([]); });
@@ -57,11 +58,11 @@ await callOnce(async () => {
       </div>
 
       <div
-        :class="{'errors': editErrors.size > 0, 'saveBtn': true }"
+        :class="{'disabled': editErrors.size > 0 || saving, 'saveBtn': true }"
         :aria-disabled="editErrors.size > 0"
         @click="saveConfig(hookUrl)"
       >
-        Save config.
+        {{ saving ? 'Saving...' : 'Save config.' }}
       </div>
     </div>
   </div>
@@ -93,7 +94,7 @@ await callOnce(async () => {
     background-color: #353535;
   }
 }
-.errors {
+.disabled {
   cursor: not-allowed;
   pointer-events: none;
   border: 2px solid #999999;
