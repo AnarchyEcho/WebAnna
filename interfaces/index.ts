@@ -18,6 +18,7 @@ export interface IConfig {
   memberCount: boolean,
   memberCountVcId: string
   workTimer: number,
+  workQuotes: string[],
   currency: string,
   sellRate: number,
   roleChannel: string,

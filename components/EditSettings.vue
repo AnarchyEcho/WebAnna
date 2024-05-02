@@ -140,6 +140,30 @@ const onInput = (input: Event, itemName: string, regex: RegExp, emptyAble: boole
 
     <div class="formItem">
       <h4>
+        Work Quotes:
+      </h4>
+      <div v-pre>
+        <!-- eslint-disable-next-line vue/no-parsing-error -->
+        You need to put this -> {{amount}} <- where the amount earned should be.
+      </div>
+      <div v-for="_, i in config['workQuotes']" :key="i" :class="{errorFlex: errors.has('workQuotes'+i), multiItem: true}">
+        <div v-if="errors.has('workQuotes'+i)" class="error">
+          Can not be empty
+        </div>
+        <div style="display: flex; gap: 5px; align-items: center;">
+          <input v-model="config['workQuotes'][i]" style="width: 300px;" type="text" @input="(x) => onInput(x, 'workQuotes'+i, /^.+$/, false)">
+          <div style="cursor: pointer;" @click="config['workQuotes'].splice(i, 1)">
+            [Remove]
+          </div>
+        </div>
+      </div>
+      <div class="addButton" @click="config['workQuotes'].push('')">
+        [Add another quote]
+      </div>
+    </div>
+
+    <div class="formItem">
+      <h4>
         Currency:
       </h4>
       <div v-if="errors.has('currency')" class="error">
