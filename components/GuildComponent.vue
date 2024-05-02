@@ -21,9 +21,8 @@ const setGuild = (guild: IGuild) => {
     class="container"
     @click="async () => {
       setGuild(guild);
-      await getConfig(`${hookUrl}/messages/1233416684518244373`, hookUrl, chosenGuild as IGuild).catch(async () => {
-        await createConfigMessage(hookUrl).then(async () => await getConfig(`${hookUrl}/messages/1233416684518244373`, hookUrl, chosenGuild as IGuild));
-      });}"
+      await getConfig(`${hookUrl}/messages/1233416684518244373`, hookUrl, chosenGuild as IGuild);
+    }"
   >
     <div class="image">
       <NuxtImg :src="guildPic" width="120px" height="120px" />
