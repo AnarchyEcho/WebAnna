@@ -7,7 +7,7 @@ export const saveConfig = async (hookUrl: string) => {
   const saving = useState<boolean>('saving', () => false);
   const formdata = new FormData();
   formdata.append('file', new Blob([JSON.stringify(fullConfig.value)], { type: 'application/json' }), msgObject.value.title.replace('_file', '.json'));
-  formdata.append('payload_json', JSON.stringify({ content: msgObject.value.title }));
+  formdata.append('payload_json', JSON.stringify({ content: `${msgObject.value.title} ${msgObject.value.id}` }));
   saving.value = true;
   await fetch(`${hookUrl}/messages/${msgObject.value.id}`, {
     method: 'PATCH',
