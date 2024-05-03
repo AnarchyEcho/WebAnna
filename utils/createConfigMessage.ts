@@ -1,5 +1,7 @@
+import type { IGuild } from '~/interfaces';
+
 export const createConfigMessage = async (hookUrl: string) => {
-  const chosenGuild = useState<any>('chosenGuild');
+  const chosenGuild = useState<IGuild>('chosenGuild');
 
   await fetch(`${hookUrl}`, {
     method: 'POST',
@@ -9,7 +11,7 @@ export const createConfigMessage = async (hookUrl: string) => {
     body: JSON.stringify({
       username: null,
       avatar_url: null,
-      content: `${chosenGuild.value.name.replaceAll(' ', '_')}_config_file`,
+      content: `${chosenGuild.value.name.replaceAll(' ', '_')}_config_file ${chosenGuild.value.id}`,
     }),
-  }).then(x => x.json());
+  });
 };
