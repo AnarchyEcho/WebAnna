@@ -6,7 +6,6 @@ const baseUrl = 'https://discordapp.com/api';
 const hookUrl = `${baseUrl}/webhooks/${config.public.annaWebhookId}/${config.public.annaWebhookToken}`;
 
 const saving = useState<boolean>('saving', () => false);
-const confIdList = useState('confIdList');
 const fullConfig = useState<IConfig | undefined>('fullConfig');
 const editErrors = useState('configErrors', () => { return new Set<string>([]); });
 const validGuilds = useState<IGuild[] | undefined>('validGuilds');
@@ -31,7 +30,6 @@ const userProfile = async () => {
 
 await callOnce(async () => {
   validGuilds.value = await userProfile();
-  confIdList.value = await getConfigList(`${hookUrl}/messages/1233416684518244373`);
 });
 </script>
 

@@ -1,7 +1,7 @@
 import type { IGuild } from '~/interfaces';
 
 export const getConfig = async (url: string, hookUrl: string, guild?: IGuild) => {
-  const undrscrdGuildName = guild?.name.replaceAll(' ', '_');
+  const undrscrdGuildName = guild?.name.replaceAll(' ', '_').replaceAll(/[^a-zA-Z0-9_]/g, '');
   const fullConfig = useState('fullConfig');
   const msgObject = useState<{
     title: string,
