@@ -169,7 +169,7 @@ const onInput = (input: Event, itemName: string, regex: RegExp, emptyAble: boole
       <div v-if="errors.has('currency')" class="error">
         Can not be empty
       </div>
-      <input v-model="config['currency']" type="text" @input="(x) => onInput(x, 'currency', /\w+/, false)">
+      <input v-model="config['currency']" type="text" @input="(x) => onInput(x, 'currency', /(\w+)|(\p{Extended_Pictographic})/u, false)">
     </div>
 
     <div class="formItem">
