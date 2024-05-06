@@ -428,7 +428,7 @@ const onInput = (input: Event, itemName: string, regex: RegExp, emptyAble: boole
           </div>
         </div>
       </div>
-      <div class="addButton" @click="config['verifyQuestions'].push({question: '', required: false, style: 1})">
+      <div v-if="config['verifyQuestions'].length < 5" class="addButton" @click="config['verifyQuestions'].push({question: '', required: false, style: 1})">
         [Add another field]
       </div>
     </div>
