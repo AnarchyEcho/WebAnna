@@ -10,13 +10,13 @@
     <NuxtLink to="/commands">
       Commands
     </NuxtLink>
-    <NuxtLink to="/settings">
+    <!-- <NuxtLink to="/settings">
       Settings
-    </NuxtLink>
+    </NuxtLink> -->
     <NuxtLink to="https://echodev.sh">
       EchoDev
     </NuxtLink>
-    <Login />
+    <!-- <Login /> -->
   </div>
 </template>
 
