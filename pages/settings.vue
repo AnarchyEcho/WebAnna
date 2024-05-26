@@ -40,8 +40,8 @@ await callOnce(async () => {
     </Head>
 
     <h3>
-      Is Anna not yet in your server? <NuxtLink to="https://discord.com/oauth2/authorize?client_id=1214431764408311829&permissions=8&scope=bot">
-        Invite her then!
+      Is Anna not yet in your server? <NuxtLink to="https://hub.docker.com/r/anarchyecho/anna">
+        Now you can host her yourself and have her join all of your servers!
       </NuxtLink>
     </h3>
 
