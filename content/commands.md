@@ -180,9 +180,9 @@ description: 'List of commands and how to use them.'
 
 **Alias**: shopadd, shopadditem.
 
-**Usage**: anna shopadd {orderId} {price} {roleId}
+**Usage**: anna shopadd {type(role|etc)} {orderId} {price} {roleId|name} and if type is etc then {key/message}
 
-**Explanation**: All {queries} are **numbers** and are ***required***.
+**Explanation**: {orderId}, {price}, and {roleId} are **numbers** and are ***required***, {type(role|etc)}, {name}, and {key/message} are **strings** and are ***required***.
 
 <br>
 
