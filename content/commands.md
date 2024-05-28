@@ -67,6 +67,17 @@ description: 'List of commands and how to use them.'
 
 <br>
 
+<br>
+
+### [Gift]
+**Summary**: Gifts an user an amount of your currency.
+
+**Usage**: anna gift {userId} {amount}
+
+**Explanation**: {userId} and {amount} are both **numbers** and are ***required***.
+
+<br>
+
 ---
 
 <br>
@@ -273,5 +284,27 @@ description: 'List of commands and how to use them.'
 **Usage**: anna feedrm {sortId} {channelId}
 
 **Explanation**: {sortId} is a **number** is ***required***, {channelId} is a **number** and is ***optional***.
+
+<br>
+
+<br>
+
+### [Alias]
+**Summary**: Assigns a different trigger for a commmand.
+
+**Usage**: anna alias {commandName} {alias}
+
+**Explanation**: {commandName} and {alias} are both **strings** and are ***required***.
+
+<br>
+
+<br>
+
+### [Give]
+**Summary**: Gives an user currency.
+
+**Usage**: anna give {userId} {amount}
+
+**Explanation**: {userId} and {amount} are both **numbers** and are ***required***.
 
 <br>
