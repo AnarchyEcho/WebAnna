@@ -78,6 +78,16 @@ description: 'List of commands and how to use them.'
 
 <br>
 
+<br>
+
+### [Weather]
+**Summary**: Gives you weather details for the selected city.
+
+**Usage**: anna weather "{city}" {country}
+
+**Explanation**: {city} and {country} are both **strings** and are ***required***.
+
+<br>
 ---
 
 <br>
