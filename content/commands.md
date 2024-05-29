@@ -88,6 +88,7 @@ description: 'List of commands and how to use them.'
 **Explanation**: {city} and {country} are both **strings** and are ***required***.
 
 <br>
+
 ---
 
 <br>
