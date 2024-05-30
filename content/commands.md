@@ -78,6 +78,17 @@ description: 'List of commands and how to use them.'
 
 <br>
 
+<br>
+
+### [Weather]
+**Summary**: Gives you weather details for the selected city.
+
+**Usage**: anna weather "{city}" {country}
+
+**Explanation**: {city} and {country} are both **strings** and are ***required***.
+
+<br>
+
 ---
 
 <br>
@@ -227,6 +238,17 @@ description: 'List of commands and how to use them.'
 **Usage**: anna warn {userId} {time} {"reason"}
 
 **Explanation**: {userId} and {time}(in minutes) are **numbers**, {"reason"} needs the "" around the message detailing the reason, and are all ***required***.
+
+<br>
+
+### [VerbalWarn]
+**Summary**: Warns selected {userId} and sends them a DM telling them of the {reason} they were warned, this is used as a separate verbal based warning for logging purposes.
+
+**Alias**: verbalwarn.
+
+**Usage**: anna verbalwarn {userId}
+
+**Explanation**: {userId} is a **number**, and is ***required***.
 
 <br>
 
