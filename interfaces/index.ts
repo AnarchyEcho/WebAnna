@@ -1,3 +1,13 @@
+export interface IGuild {
+  id: string,
+  name: string,
+  icon: string | null,
+  owner: boolean,
+  permissions: number,
+  permissions_new: string,
+  features: string[]
+}
+
 export interface IConfig {
   botPrefix: string,
   botChannels: string[],
@@ -8,6 +18,7 @@ export interface IConfig {
   memberCount: boolean,
   memberCountVcId: string
   workTimer: number,
+  workQuotes: string[],
   currency: string,
   sellRate: number,
   roleChannel: string,

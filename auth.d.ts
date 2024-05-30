@@ -1,5 +1,5 @@
 declare module '#auth-utils' {
-  interface User extends User {
+  interface User {
     discordId: string,
     tokens: {
       token_type: string,
