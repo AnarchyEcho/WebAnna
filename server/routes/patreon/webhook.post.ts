@@ -1,6 +1,6 @@
 export default defineEventHandler(async (event) => {
   const hookUrl = getQuery(event).hookUrl as string;
-  const body = JSON.stringify(JSON.parse(await readBody(event).then(x => x)));
+  const body = JSON.stringify(JSON.parse(JSON.stringify(await readBody(event).then(x => x))));
 
   if (hookUrl) {
     await fetch(hookUrl, {
