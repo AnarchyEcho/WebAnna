@@ -241,6 +241,17 @@ description: 'List of commands and how to use them.'
 
 <br>
 
+### [VerbalWarn]
+**Summary**: Warns selected {userId} and sends them a DM telling them of the {reason} they were warned, this is used as a separate verbal based warning for logging purposes.
+
+**Alias**: verbalwarn.
+
+**Usage**: anna verbalwarn {userId}
+
+**Explanation**: {userId} is a **number**, and is ***required***.
+
+<br>
+
 ### [Forgive]
 **Summary**: Forgives selected {userId}, marking warning nr {warningId} as forgiven.
 
