@@ -1,5 +1,16 @@
+<script setup lang="ts">
+const logo = ref('/logo.ico');
+</script>
+
 <template>
   <div class="app">
+    <Head>
+      <Meta name="description" content="Anna, your favourite feature rich Discord bot" />
+      <Meta name="keywords" content="Typescript, Vue, Nuxt, Anna, Bot, Discord" />
+      <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <Link rel="icon" type="image/ico" :href="logo" />
+    </Head>
+
     <NuxtLoadingIndicator />
     <Header class="Header" />
     <NuxtPage class="Body" />
