@@ -5,7 +5,7 @@ description: 'Summary and buzzwords'
 
 # Documentation and settings website for Anna, your favourite feature rich Discord bot
 
-Is Anna not yet in your server? [Now you can host her yourself and have her join all of your servers!]([https://hub.docker.com/r/anarchyecho/anna](https://hub.docker.com/r/anarchyecho/anna))
+Is Anna not yet in your server? [Now you can host her yourself and have her join all of your servers!](https://hub.docker.com/r/anarchyecho/anna)
 
 ## Anna's features
 
